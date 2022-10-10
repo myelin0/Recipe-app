@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   resources :public_recipes 
   resources :general_shopping_list 
   # Defines the root path route ("/")
-  root "recipes#index"
+  devise_scope :user do
+  get "/", :to => "devise/sessions#new", :as => :home 
+  post "/users/sign_up", :to => "devise/sessions#create", :as => :sign_up
+end
 end
