@@ -615,3 +615,267 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 105ms (Views: 99.8ms | ActiveRecord: 0.0ms | Allocations: 6656)
 
 
+Started GET "/" for 127.0.0.1 at 2022-10-11 17:22:22 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2242)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 5213)
+Completed 200 OK in 57ms (Views: 50.4ms | Allocations: 6623)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-11 17:22:45 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 12.0ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.5ms | Allocations: 2242)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | Allocations: 5208)
+Completed 200 OK in 82ms (Views: 75.9ms | Allocations: 6619)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-11 17:23:32 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2242)
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 5210)
+Completed 200 OK in 56ms (Views: 49.7ms | Allocations: 6641)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-11 17:24:17 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2242)
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 5207)
+Completed 200 OK in 53ms (Views: 46.9ms | Allocations: 6600)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:24:36 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 121)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 3009)
+Completed 200 OK in 65ms (Views: 56.9ms | Allocations: 3856)
+
+
+Started GET "/food" for 127.0.0.1 at 2022-10-11 17:24:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/food"):
+  
+Started GET "/food" for 127.0.0.1 at 2022-10-11 17:24:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/food"):
+  
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:25:00 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 123)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 3433)
+Completed 200 OK in 42ms (Views: 35.6ms | Allocations: 4290)
+
+
+Started GET "/foods" for 127.0.0.1 at 2022-10-11 17:25:03 +0300
+  
+ActionController::RoutingError (uninitialized constant FoodsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:25:16 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 2575)
+Completed 200 OK in 22ms (Views: 16.9ms | Allocations: 2869)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:26:02 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 123)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 3435)
+Completed 200 OK in 39ms (Views: 32.4ms | Allocations: 4271)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:26:51 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 123)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 3422)
+Completed 200 OK in 40ms (Views: 34.5ms | Allocations: 4286)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:27:02 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 123)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 3430)
+Completed 200 OK in 41ms (Views: 33.8ms | Allocations: 4290)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:28:20 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 2599)
+Completed 200 OK in 24ms (Views: 20.4ms | Allocations: 2892)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:29:05 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 89.9ms | Allocations: 4332)
+Completed 200 OK in 103ms (Views: 91.7ms | Allocations: 4607)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:29:26 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 123)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 127.8ms | Allocations: 5037)
+Completed 200 OK in 150ms (Views: 143.2ms | Allocations: 5879)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:29:41 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 97.5ms | Allocations: 4100)
+Completed 200 OK in 106ms (Views: 99.3ms | Allocations: 4393)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:29:45 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 2581)
+Completed 200 OK in 24ms (Views: 19.6ms | Allocations: 2856)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:31:16 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 123)
+  Rendered shared/_navbar.html.erb (Duration: 3.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 3409)
+Completed 200 OK in 57ms (Views: 45.4ms | Allocations: 4251)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:32:26 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 92.1ms | Allocations: 4186)
+Completed 200 OK in 99ms (Views: 94.0ms | Allocations: 4479)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:32:44 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 2628)
+Completed 200 OK in 26ms (Views: 22.5ms | Allocations: 2903)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 17:33:24 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 123)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 3421)
+Completed 200 OK in 37ms (Views: 31.8ms | Allocations: 4263)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 18:18:37 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 123)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 3421)
+Completed 200 OK in 35ms (Views: 29.7ms | Allocations: 4283)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-11 18:18:40 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 545)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 2244)
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 4798)
+Completed 200 OK in 46ms (Views: 40.9ms | Allocations: 5985)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 18:18:43 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 2631)
+Completed 200 OK in 25ms (Views: 18.4ms | Allocations: 2927)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-11 18:18:44 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1222)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 3570)
+Completed 200 OK in 26ms (Views: 21.3ms | Allocations: 4298)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-11 18:18:50 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2581)
+Completed 200 OK in 20ms (Views: 15.2ms | Allocations: 2858)
+
+
