@@ -13,13 +13,14 @@
  *= require_tree .
  *= require_self
  */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-nav {
-  color: #fff;
+.navlink {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  float: right;
 }
