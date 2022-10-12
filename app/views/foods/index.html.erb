@@ -3,11 +3,13 @@
 <h1>Foods</h1>
 
 <div id="foods">
+   <%= render partial: '/shared/food' %>
   <% @foods.each do |food| %>
     <%= render food %>
     <p>
       <%= link_to "Show this food", food %>
     </p>
+
   <% end %>
 </div>
 
