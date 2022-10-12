@@ -3,8 +3,8 @@
 <%= render @food %>
 
 <div>
-  <%= link_to "Edit this food", edit_food_path(@food) %> |
-  <%= link_to "Back to foods", foods_path %>
+  <%= link_to "Edit this food", edit_food_path(@food), class: "navlink" %> |
+  <%= link_to "Back to foods", foods_path, class: "navlink" %>
 
   <%= button_to "Destroy this food", @food, method: :delete %>
 </div>
