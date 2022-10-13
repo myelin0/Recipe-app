@@ -24,22 +24,22 @@ class RecipesController < ApplicationController
       end
     end
   end
+  def destroy
+    @recipe = current_user.recipes.find(params[:id])
+    @recipe.destroy
+    redirect_to recipes_url notice:'Recipe was successfully destroyed.'
+  end
+  
+  def public_recipes
+    @recipes = Recipe.where(public: 'true')
+  end
+  
+  private
+  
+  def recipe_params
+    params
+    .require(:recipe)
+    .permit(:name, :preparation_time, :cooking_time, :description, :public)
+  end
 end
- def destroy
-  @recipe = current_user.recipes.find(params[:id])
-  @recipe.destroy
-  redirect_to recipes_url notice:'Recipe was successfully destroyed.'
- end
-
-def public_recipes
-    @recipes = Recipe.where(public: 't')
-end
-
- private
-
- def recipe_params
-  params
-  .require(:recipe)
-  .permit(:name, :preparation_time, :cooking_time, :description, :public)
- end
 
