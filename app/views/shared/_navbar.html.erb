@@ -4,14 +4,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <% if user_signed_in? %>
-          Signed in as <%= current_user.email %>.           <div class="text-primary">
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-      <% else %>
-          <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
-      <% end %>
     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-<<<<<<< HEAD
       <ul class="navbar-nav">
       <% if user_signed_in? %>
           Signed in as <%= current_user.email %>
@@ -23,9 +16,6 @@
            <%= link_to 'Sign in', new_user_session_path, class: "nav-link" %>
           </li>
       <% end %>
-=======
-    <ul class="navbar-nav">
->>>>>>> 40ea6f6b067062b719325b380fcd4c6d57c473eb
         <li class="nav-item">
           <a class="nav-link" href="/recipes">Recipes</a>
         </li>
