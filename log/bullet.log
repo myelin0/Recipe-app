@@ -1,0 +1,29 @@
+2022-10-13 12:04:36[WARN] user: HP
+GET /foods.4
+USE eager loading detected
+  Food => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-10-13 12:48:23[WARN] user: HP
+GET /public_recipes
+USE eager loading detected
+  Recipe => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-10-13 12:48:23[WARN] user: HP
+GET /public_recipes
+USE eager loading detected
+  Recipe => [:recipe_food]
+  Add to your query: .includes([:recipe_food])
+Call stack
+
+2022-10-13 12:48:44[WARN] user: HP
+GET /recipes
+USE eager loading detected
+  Recipe => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  C:/Users/HP/Desktop/Programming/Recipe-app/app/models/ability.rb:9:in `block in initialize'
+

@@ -2,10 +2,17 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, PublicRecipe  # start by defining rules for all users, also not logged ones
+    can :read, PublicRecipe # start by defining rules for all users, also not logged ones
     return unless user.present?
-    can :manage, Recipe, user_id: user.id # if the user is logged in can manage it's own posts
-    can :create, Recipe # logged in users can also create comments
+
+    can :destroy, Recipe do |recipe|
+      recipe.user == user
+    end
+
+    can :create, Recipe
+
+    # can :manage, Recipe, user_id: user.id # if the user is logged in can manage it's own posts
+    # can :create, Recipe # logged in users can also create comments
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
