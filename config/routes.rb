@@ -7,12 +7,12 @@ Rails.application.routes.draw do
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :foods, except: :update
-  resources :recipes, except: :update
-  resources :public_recipes
-  resources :general_shopping_list
-  # Defines the root path route ("/")
-  devise_scope :user do
-    get '/', to: 'devise/sessions#new', as: :home
-    post '/users/sign_up', to: 'devise/sessions#create', as: :sign_up
+  resources :recipes, except: :update do
+    resources :recipe_foods
   end
+  # resources :public_recipes
+  resources :general_shopping_list
+  get 'public_recipes', to: 'recipes#public_recipes'
+  # Defines the root path route ("/")
+ root "recipes#index"
 end
