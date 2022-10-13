@@ -10,9 +10,6 @@ Rails.application.routes.draw do
   resources :recipes, except: :update
   resources :public_recipes
   resources :general_shopping_list
-  # Defines the root path route ("/")
-  devise_scope :user do
-    get '/', to: 'devise/sessions#new', as: :home
-    post '/users/sign_up', to: 'devise/sessions#create', as: :sign_up
-  end
+
+  root 'recipes#index'
 end

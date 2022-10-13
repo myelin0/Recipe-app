@@ -2263,3 +2263,620 @@ ActionController::RoutingError (uninitialized constant PublicRecipesController
             raise MissingController.new(error.message, error.name)
             ^^^^^):
   
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-10-12 18:34:33 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.1ms | Allocations: 2242)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 350)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 5418)
+Completed 200 OK in 91ms (Views: 70.5ms | Allocations: 6830)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-12 18:34:34 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 122)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 3133)
+Completed 200 OK in 30ms (Views: 23.8ms | Allocations: 3798)
+
+
+Started GET "/foods" for 127.0.0.1 at 2022-10-12 18:34:36 +0300
+Processing by FoodsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:16
+  Rendered foods/index.html.erb within layouts/application (Duration: 195.1ms | Allocations: 4095)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 207.2ms | Allocations: 7032)
+Completed 200 OK in 220ms (Views: 214.0ms | ActiveRecord: 68.2ms | Allocations: 7750)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-10-12 18:34:37 +0300
+  
+ActionController::RoutingError (uninitialized constant PublicRecipesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:13:56 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 140.1ms | Allocations: 736)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1044.3ms | Allocations: 5785)
+Importmap skipped missing path: application.js
+Importmap skipped missing path: application.js
+  Rendered shared/_navbar.html.erb (Duration: 365.6ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 7112.4ms | Allocations: 43101)
+Completed 200 OK in 7940ms (Views: 7632.6ms | ActiveRecord: 48.3ms | Allocations: 53971)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-10-13 11:14:16 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"graycemuthui20@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (117.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "graycemuthui20@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 301ms (ActiveRecord: 117.5ms | Allocations: 3890)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"graycemuthui20@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1353)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 64)
+  Rendered layout layouts/application.html.erb (Duration: 89.1ms | Allocations: 3828)
+Completed 200 OK in 861ms (Views: 91.9ms | ActiveRecord: 0.0ms | Allocations: 5888)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-13 11:14:21 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 33.1ms | Allocations: 221)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 152)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 149.6ms | Allocations: 2232)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 210.4ms | Allocations: 4866)
+Completed 200 OK in 240ms (Views: 234.7ms | ActiveRecord: 0.0ms | Allocations: 6217)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-10-13 11:14:34 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"graycemuthui20@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "graycemuthui20@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (99.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "graycemuthui20@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-13 08:14:35.680046"], ["updated_at", "2022-10-13 08:14:35.680046"]]
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1135ms (ActiveRecord: 118.0ms | Allocations: 8477)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:36 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 31ms (ActiveRecord: 6.5ms | Allocations: 1993)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:36 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 16ms (ActiveRecord: 0.7ms | Allocations: 1645)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:37 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1615)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:37 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 32ms (ActiveRecord: 0.3ms | Allocations: 1630)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:37 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms | Allocations: 1630)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:37 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms | Allocations: 1633)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:38 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 1633)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:38 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1654)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:38 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms | Allocations: 1630)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:39 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1636)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:39 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms | Allocations: 1630)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:39 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.8ms | Allocations: 1651)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:39 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 0.7ms | Allocations: 1630)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:40 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 34ms (ActiveRecord: 0.3ms | Allocations: 1621)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:40 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 0.5ms | Allocations: 1609)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:40 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms | Allocations: 1618)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:41 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1627)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:41 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms | Allocations: 1636)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:42 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 1636)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:43 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 0.4ms | Allocations: 1632)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:44 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 20ms (ActiveRecord: 0.6ms | Allocations: 1651)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:44 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 0.6ms | Allocations: 1645)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:44 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 1630)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:45 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms | Allocations: 1639)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:45 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms | Allocations: 1639)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:45 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 40ms (ActiveRecord: 0.6ms | Allocations: 1627)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:46 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1648)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:46 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 35ms (ActiveRecord: 0.5ms | Allocations: 1612)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:47 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 1.1ms | Allocations: 1627)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:47 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 94ms (ActiveRecord: 0.4ms | Allocations: 1634)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:47 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 113ms (ActiveRecord: 0.7ms | Allocations: 1648)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:48 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 40ms (ActiveRecord: 0.4ms | Allocations: 1630)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:48 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms | Allocations: 1645)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:48 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms | Allocations: 1645)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:49 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 0.4ms | Allocations: 1630)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:49 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 1642)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:49 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms | Allocations: 1651)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:50 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.6ms | Allocations: 1654)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:14:50 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.3ms | Allocations: 1636)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-13 11:16:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 358)
+Importmap skipped missing path: application.js
+Importmap skipped missing path: application.js
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 116.8ms | Allocations: 9545)
+  Rendered layout layouts/application.html.erb (Duration: 566.8ms | Allocations: 47602)
+Completed 200 OK in 689ms (Views: 574.2ms | ActiveRecord: 31.3ms | Allocations: 51302)
+
+
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 11:16:35 +0300
+Processing by FoodsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (21.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:16
+  Rendered foods/index.html.erb within layouts/application (Duration: 38.8ms | Allocations: 1186)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 8.0ms | Allocations: 1040)
+  Rendered layout layouts/application.html.erb (Duration: 122.5ms | Allocations: 5054)
+Completed 200 OK in 486ms (Views: 113.2ms | ActiveRecord: 22.8ms | Allocations: 8327)
+
+
+Started GET "/foods/new" for 127.0.0.1 at 2022-10-13 11:16:38 +0300
+Processing by FoodsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/new.html.erb within layouts/application (Duration: 166.7ms | Allocations: 4081)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 9.3ms | Allocations: 1119)
+  Rendered layout layouts/application.html.erb (Duration: 213.4ms | Allocations: 7661)
+Completed 200 OK in 304ms (Views: 214.9ms | ActiveRecord: 10.0ms | Allocations: 11708)
+
+
+Started POST "/foods" for 127.0.0.1 at 2022-10-13 11:16:45 +0300
+Processing by FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "food"=>{"name"=>"Banana", "measurement_unit"=>"grams", "price"=>"23"}, "commit"=>"Create Food"}
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1236)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 12.2ms | Allocations: 1100)
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | Allocations: 4768)
+Completed 422 Unprocessable Entity in 173ms (Views: 45.0ms | ActiveRecord: 1.0ms | Allocations: 7667)
+
+
+Started POST "/foods" for 127.0.0.1 at 2022-10-13 11:16:51 +0300
+Processing by FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "food"=>{"name"=>"Banana", "measurement_unit"=>"grams", "price"=>"23"}, "commit"=>"Create Food"}
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1117)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 5.5ms | Allocations: 933)
+  Rendered layout layouts/application.html.erb (Duration: 68.8ms | Allocations: 4359)
+Completed 422 Unprocessable Entity in 83ms (Views: 70.8ms | ActiveRecord: 0.6ms | Allocations: 5665)
+
+
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 11:16:53 +0300
+Processing by FoodsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:16
+  Rendered foods/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 624)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 9.1ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 4107)
+Completed 200 OK in 56ms (Views: 49.9ms | ActiveRecord: 1.4ms | Allocations: 4395)
+
+
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 11:16:56 +0300
+Processing by FoodsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:16
+  Rendered foods/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 623)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 10.5ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 81.2ms | Allocations: 4094)
+Completed 200 OK in 93ms (Views: 87.2ms | ActiveRecord: 1.0ms | Allocations: 4384)
+
+
+Started GET "/foods/new" for 127.0.0.1 at 2022-10-13 11:17:01 +0300
+Processing by FoodsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 1332)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 5.8ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 86.0ms | Allocations: 4574)
+Completed 200 OK in 100ms (Views: 95.4ms | ActiveRecord: 0.3ms | Allocations: 4866)
+
+
+Started POST "/foods" for 127.0.0.1 at 2022-10-13 11:17:24 +0300
+Processing by FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "food"=>{"name"=>"Banana", "measurement_unit"=>"grams", "price"=>"23"}, "commit"=>"Create Food"}
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1117)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 15.0ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 101.6ms | Allocations: 4351)
+Completed 422 Unprocessable Entity in 111ms (Views: 103.8ms | ActiveRecord: 0.9ms | Allocations: 5569)
+
+
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 11:19:07 +0300
+Processing by FoodsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (2.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:16
+  Rendered foods/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 623)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (Duration: 12.3ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 60.8ms | Allocations: 4102)
+Completed 200 OK in 82ms (Views: 62.3ms | ActiveRecord: 2.5ms | Allocations: 4389)
+
+
+Started POST "/foods" for 127.0.0.1 at 2022-10-13 11:26:19 +0300
+Processing by FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "food"=>{"name"=>"Banana", "measurement_unit"=>"grams", "price"=>"23"}, "commit"=>"Create Food"}
+Started POST "/foods" for 127.0.0.1 at 2022-10-13 11:26:26 +0300
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 19.3ms | Allocations: 14564)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `user_id`
+
+          raise ActiveModel::MissingAttributeError, "can't write unknown attribute `#{name}`"
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:16:in `create'
+Processing by FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "food"=>{"name"=>"Banana", "measurement_unit"=>"grams", "price"=>"23"}, "commit"=>"Create Food"}
+Started POST "/foods" for 127.0.0.1 at 2022-10-13 11:26:35 +0300
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 61.5ms | Allocations: 12135)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `user_id`
+
+          raise ActiveModel::MissingAttributeError, "can't write unknown attribute `#{name}`"
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:16:in `create'
+Processing by FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "food"=>{"name"=>"Banana", "measurement_unit"=>"grams", "price"=>"23"}, "commit"=>"Create Food"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 32.7ms | Allocations: 30966)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `user_id`
+
+          raise ActiveModel::MissingAttributeError, "can't write unknown attribute `#{name}`"
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:16:in `create'
+Started POST "/foods" for 127.0.0.1 at 2022-10-13 11:27:42 +0300
+Processing by FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "food"=>{"name"=>"Banana", "measurement_unit"=>"grams", "price"=>"23"}, "commit"=>"Create Food"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 48.4ms | Allocations: 11403)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `user_id`
+
+          raise ActiveModel::MissingAttributeError, "can't write unknown attribute `#{name}`"
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:16:in `create'
+  [1m[35m (99.2ms)[0m  [1m[35mCREATE DATABASE "recipe_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE DATABASE "recipe_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8277932024918942610)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToFood (20221013083107)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (107.5ms)[0m  [1m[35mALTER TABLE "foods" ADD "user_id" bigint NOT NULL[0m
+  [1m[35m (81.7ms)[0m  [1m[35mCREATE INDEX "index_foods_on_user_id" ON "foods" ("user_id")[0m
+  [1m[35m (125.9ms)[0m  [1m[35mALTER TABLE "foods" ADD CONSTRAINT "fk_rails_541e2e5c7b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221013083107"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8277932024918942610)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
