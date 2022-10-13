@@ -3234,3 +3234,182 @@ Completed 500 Internal Server Error in 107ms (ActiveRecord: 22.9ms | Allocations
 NoMethodError (undefined method `foods' for #<User id: 1, email: "graycemuthui20@gmail.com", created_at: "2022-10-13 08:14:35.680046000 +0000", updated_at: "2022-10-13 08:14:35.680046000 +0000">):
   
 app/controllers/foods_controller.rb:27:in `destroy'
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 11:54:08 +0300
+  
+SyntaxError (C:/Users/HP/Desktop/Programming/Recipe-app/config/routes.rb:10: syntax error, unexpected <<, expecting `end'
+<<<<<<< HEAD
+^~
+C:/Users/HP/Desktop/Programming/Recipe-app/config/routes.rb:16: syntax error, unexpected ===, expecting end-of-input
+=======
+^~~
+):
+  
+config/routes.rb:10: syntax error, unexpected <<, expecting `end'
+config/routes.rb:16: syntax error, unexpected ===, expecting end-of-input
+config/routes.rb:10: syntax error, unexpected <<, expecting `end'
+config/routes.rb:16: syntax error, unexpected ===, expecting end-of-input
+config/routes.rb:10: syntax error, unexpected <<, expecting `end'
+config/routes.rb:16: syntax error, unexpected ===, expecting end-of-input
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 11:55:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::DuplicateMigrationNameError (
+
+Multiple migrations have the name AddUserToFood.
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:1384:in `validate'
+activerecord (7.0.4) lib/active_record/migration.rb:1257:in `initialize'
+activerecord (7.0.4) lib/active_record/migration.rb:1135:in `new'
+activerecord (7.0.4) lib/active_record/migration.rb:1135:in `open'
+activerecord (7.0.4) lib/active_record/migration.rb:156:in `detailed_migration_message'
+activerecord (7.0.4) lib/active_record/migration.rb:147:in `initialize'
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `exception'
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `raise'
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.4) lib/active_record/migration.rb:599:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 11:55:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20221012200837_create_recipe.rb
+20221013073537_create_recipe_foods.rb
+20221013080315_add_user_to_food.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8277932024918942610)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecipe (20221012200837)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (205.6ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "description" text, "preparation_time" character varying, "cooking_time" character varying, "user_id" bigint, "public" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9606fce865"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (24.5ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_user_id" ON "recipes" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221012200837"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRecipeFoods (20221013073537)
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (60.3ms)[0m  [1m[35mCREATE TABLE "recipe_foods" ("id" bigserial primary key, "quantity" integer, "recipe_id" bigint NOT NULL, "food_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b279eaba63"
+FOREIGN KEY ("recipe_id")
+  REFERENCES "recipes" ("id")
+, CONSTRAINT "fk_rails_cef9648c35"
+FOREIGN KEY ("food_id")
+  REFERENCES "foods" ("id")
+)[0m
+  [1m[35m (20.6ms)[0m  [1m[35mCREATE INDEX "index_recipe_foods_on_recipe_id" ON "recipe_foods" ("recipe_id")[0m
+  [1m[35m (23.4ms)[0m  [1m[35mCREATE INDEX "index_recipe_foods_on_food_id" ON "recipe_foods" ("food_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221013073537"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserToFood (20221013080315)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.7ms)[0m  [1m[35mALTER TABLE "foods" ADD "user_id" bigint NOT NULL[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(8277932024918942610)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8277932024918942610)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8277932024918942610)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 12:00:37 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8277932024918942610)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(8277932024918942610)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

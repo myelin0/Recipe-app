@@ -10,16 +10,18 @@ class FoodsController < ApplicationController
     @food = Food.new
   end
 
-  # POST /foods
   def create
-    @food = Food.new(food_params)
-    @food.user = current_user
-    if @food.save
-      flash[:success] = 'New inventory has been created !!'
-      redirect_to foods_path
-    else
-      flash['alert'] = 'Inventory could not created !!'
-      render :new
+    @food = current_user.foods.new(food_params)
+    respond_to do |format|
+      format.html do
+        if @food.save
+          flash[:success] = 'Food saved successfully'
+          redirect_to foods_path(@food)
+        else
+          flash.now[:error] = 'Error: Food could not be saved'
+          redirect_to new_food_path
+        end
+      end
     end
   end
 
