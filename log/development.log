@@ -2880,3 +2880,357 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8277932024918942610)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/foods" for 127.0.0.1 at 2022-10-13 11:32:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "food"=>{"name"=>"Banana", "measurement_unit"=>"grams", "price"=>"23"}, "commit"=>"Create Food"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17:in `create'
+  [1m[36mFood Create (82.5ms)[0m  [1m[32mINSERT INTO "foods" ("name", "measurement_unit", "price", "quantity", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Banana"], ["measurement_unit", "grams"], ["price", 23], ["quantity", nil], ["created_at", "2022-10-13 08:32:46.538563"], ["updated_at", "2022-10-13 08:32:46.538563"], ["user_id", 1]]
+  ↳ app/controllers/foods_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/foods
+Completed 302 Found in 162ms (ActiveRecord: 97.7ms | Allocations: 14411)
+
+
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 11:32:46 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/foods/index.html.erb:21
+  Rendered foods/index.html.erb within layouts/application (Duration: 78.0ms | Allocations: 4191)
+Importmap skipped missing path: application.js
+Importmap skipped missing path: application.js
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 229.5ms | Allocations: 19225)
+Completed 200 OK in 251ms (Views: 237.1ms | ActiveRecord: 1.5ms | Allocations: 21484)
+
+
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:50 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 2.8ms | Allocations: 9598)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:51 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (2.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 4.2ms | Allocations: 8605)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:52 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.0ms | Allocations: 7296)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:53 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.1ms | Allocations: 12903)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:55 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.6ms | Allocations: 9247)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:56 +0300
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:56 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (5.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 5.5ms | Allocations: 8820)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:56 +0300
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:57 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (10.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 455ms (ActiveRecord: 121.9ms | Allocations: 59873)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (8.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 1272ms (ActiveRecord: 110.8ms | Allocations: 408967)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:32:59 +0300
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (31.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 698ms (ActiveRecord: 83.1ms | Allocations: 240377)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (4.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 10.9ms | Allocations: 25581)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:33:02 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (13.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 21.6ms | Allocations: 14609)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:33:04 +0300
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:33:05 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (11.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 21.3ms | Allocations: 13755)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:33:06 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (7.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 17.0ms | Allocations: 15908)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:33:06 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (8.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 15.4ms | Allocations: 14916)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 6.7ms | Allocations: 14940)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:33:08 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (8.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 23.3ms | Allocations: 19535)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started GET "/foods" for 127.0.0.1 at 2022-10-13 11:33:42 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:16
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/foods/index.html.erb:21
+  Rendered foods/index.html.erb within layouts/application (Duration: 29.0ms | Allocations: 5682)
+Importmap skipped missing path: application.js
+Importmap skipped missing path: application.js
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 86.8ms | Allocations: 20707)
+Completed 200 OK in 154ms (Views: 82.3ms | ActiveRecord: 34.1ms | Allocations: 28234)
+
+
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:33:50 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27:in `destroy'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms | Allocations: 9511)
+
+
+  
+NameError (Rails couldn't find a valid model for RecipeFood association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+
+          raise NameError, msg
+          ^^^^^):
+  
+app/controllers/foods_controller.rb:28:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:35:16 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 13.7ms | Allocations: 10554)
+
+
+  
+NoMethodError (undefined method `foods' for #<User id: 1, email: "graycemuthui20@gmail.com", created_at: "2022-10-13 08:14:35.680046000 +0000", updated_at: "2022-10-13 08:14:35.680046000 +0000">):
+  
+app/controllers/foods_controller.rb:27:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:35:44 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 6.9ms | Allocations: 10517)
+
+
+  
+NoMethodError (undefined method `food' for #<User id: 1, email: "graycemuthui20@gmail.com", created_at: "2022-10-13 08:14:35.680046000 +0000", updated_at: "2022-10-13 08:14:35.680046000 +0000">):
+  
+app/controllers/foods_controller.rb:27:in `destroy'
+Started DELETE "/foods/1" for 127.0.0.1 at 2022-10-13 11:36:21 +0300
+Processing by FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 22.9ms | Allocations: 10475)
+
+
+  
+NoMethodError (undefined method `foods' for #<User id: 1, email: "graycemuthui20@gmail.com", created_at: "2022-10-13 08:14:35.680046000 +0000", updated_at: "2022-10-13 08:14:35.680046000 +0000">):
+  
+app/controllers/foods_controller.rb:27:in `destroy'
