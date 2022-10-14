@@ -1,7 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    # @user = User.includes(:recipes).find(params[:id])
-    # @recipes = Recipe.all
+
     @recipes = current_user.recipes.order(:id)
   end
 
@@ -19,7 +18,7 @@ class RecipesController < ApplicationController
       format.html do
         if @recipe.save
           flash[:success] = 'Recipe saved successfully'
-          redirect_to recipe_path(@recipe)
+          redirect_to recipes_path(@recipe)
         else
           flash.now[:error] = 'Error: Recipe could not be saved'
           redirect_to new_recipe_path
@@ -27,23 +26,22 @@ class RecipesController < ApplicationController
       end
     end
   end
-
-
-  def destroy
-    @recipe = current_user.recipes.find(params[:id])
-    @recipe.destroy
-    redirect_to recipes_url notice: 'Recipe was successfully destroyed.'
-  end
-
-  def public_recipes
-    @recipes = Recipe.where(public: 't')
-  end
-
-  protected
-
-  def recipe_params
-    params
+    
+    def destroy
+      @recipe = current_user.recipes.find(params[:id])
+      @recipe.destroy
+      redirect_to recipes_url notice: 'Recipe was successfully destroyed.'
+    end
+    
+    def public_recipes
+      @recipes = Recipe.where(public: 't')
+    end
+    
+    protected
+    
+    def recipe_params
+      params
       .require(:recipe)
       .permit(:name, :preparation_time, :cooking_time, :description, :public)
+    end
   end
-end
