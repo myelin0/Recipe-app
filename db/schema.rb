@@ -14,18 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_14_205619) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "Recipes", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.integer "preparation_time"
-    t.integer "cooking_time"
-    t.bigint "user_id"
-    t.boolean "public"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_Recipes_on_user_id"
-  end
-
   create_table "foods", force: :cascade do |t|
     t.string "name"
     t.string "measurement_unit"
