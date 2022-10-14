@@ -1,21 +1,23 @@
-<h1> Welcome to your Recipes!</h1>
-<div class="container">
-    <%= link_to  "Add a recipe", new_recipe_path, class:"btn btn-primary mb-4" %>
-    <% @recipes.each do |recipe| %>
-    <ul class="list-group">
-       <li class="list-group-item d-flex justify-content-between mb-4">
-        <div>
-          <h2><%= recipe.name %></h2>
-          <% if can? :destroy, recipe %>
-          <div class="d-flex">
-            <%= link_to  "DETAILS", recipe_path(recipe), class:"btn btn-primary me-4" %>
-            <%= button_to "Delete", recipe, method: :delete, class:"btn btn-primary me-4" %></td>
-           
+<div class = "forms">
+  <h1> Welcome to your Recipes!</h1>
+  <div class="container">
+      <%= link_to  "Add a recipe", new_recipe_path, class:"btn btn-primary mb-4" %>
+      <% @recipes.each do |recipe| %>
+      <ul class="list-group">
+         <li class="list-group-item d-flex justify-content-between mb-4">
+          <div>
+            <h2><%= recipe.name %></h2>
+            <% if can? :destroy, recipe %>
+            <div class="d-flex">
+              <%= link_to  "DETAILS", recipe_path(recipe), class:"btn btn-primary me-4" %>
+              <%= button_to "Delete", recipe, method: :delete, class:"btn btn-primary me-4" %></td>
+  
+            </div>
+            <% end %>
           </div>
-          <% end %>
-        </div>
-          <p class="ms-4"><%= recipe.description %></p>
-       </li>
-    </ul>
-    <%end%>
+            <p class="ms-4"><%= recipe.description %></p>
+         </li>
+      </ul>
+      <%end%>
+  </div>
 </div>
