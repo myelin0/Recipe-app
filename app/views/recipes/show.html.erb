@@ -5,7 +5,7 @@
     <button class="btn btn-secondary">Public</button>
   </div>
   <h4>Cooking time: <%= @recipe.cooking_time %></h4>
-  <p>Steps go here...</p>
+  <%= @recipe.description %>
 
   <div class="d-flex justify-content-between mt-5">
     <%= link_to  "Generate shopping list", recipe_recipe_foods_path(@recipe.id), class:"btn btn-primary me-4" %>

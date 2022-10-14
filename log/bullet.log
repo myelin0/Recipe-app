@@ -75,3 +75,45 @@ USE eager loading detected
 Call stack
   C:/Users/HP/Desktop/Programming/Recipe-app/app/models/ability.rb:9:in `block in initialize'
 
+2022-10-13 23:16:31[WARN] user: Emi
+GET /foods
+USE eager loading detected
+  Food => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-10-13 23:17:00[WARN] user: Emi
+GET /foods
+USE eager loading detected
+  Food => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-10-13 23:17:14[WARN] user: Emi
+GET /foods
+USE eager loading detected
+  Food => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-10-13 23:17:29[WARN] user: Emi
+GET /foods
+USE eager loading detected
+  Food => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-10-14 09:20:17[WARN] user: Emi
+GET /foods
+USE eager loading detected
+  Food => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-10-14 10:36:17[WARN] user: Emi
+GET /recipes/14
+USE eager loading detected
+  RecipeFood => [:food]
+  Add to your query: .includes([:food])
+Call stack
+
