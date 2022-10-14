@@ -9,7 +9,8 @@
           <% if can? :destroy, recipe %>
           <div class="d-flex">
             <%= link_to  "DETAILS", recipe_path(recipe), class:"btn btn-primary me-4" %>
-            <%= link_to "REMOVE", recipe, data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' }, class:"btn btn-danger" %>
+            <%= button_to "Delete", recipe, method: :delete, class:"btn btn-primary me-4" %></td>
+           
           </div>
           <% end %>
         </div>

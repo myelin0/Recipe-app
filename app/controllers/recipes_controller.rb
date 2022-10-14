@@ -1,6 +1,5 @@
 class RecipesController < ApplicationController
   def index
-    # @recipes = Recipe.includes(:user).where(user: current_user)
     @recipes = current_user.recipes.order(:id)
   end
 
@@ -18,9 +17,9 @@ class RecipesController < ApplicationController
       format.html do
         if @recipe.save
           flash[:success] = 'Recipe saved successfully'
-          redirect_to recipe_path(@recipe)
+          redirect_to recipes_path(@recipe)
         else
-          flash.now[:error] = 'Error:Recipe could not be saved'
+          flash.now[:error] = 'Error: Recipe could not be saved'
           redirect_to new_recipe_path
         end
       end
@@ -34,10 +33,10 @@ class RecipesController < ApplicationController
   end
 
   def public_recipes
-    @recipes = Recipe.where(public: 'true')
+    @recipes = Recipe.where(public: 't')
   end
 
-  private
+  protected
 
   def recipe_params
     params

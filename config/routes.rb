@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   resources :recipes, except: :update do
     resources :recipe_foods
   end
-  # resources :public_recipes
+  resources :users 
   resources :general_shopping_list
   get 'public_recipes', to: 'recipes#public_recipes'
   # Defines the root path route ("/")
-  root 'recipes#index'
+ root "recipes#index"
 end
